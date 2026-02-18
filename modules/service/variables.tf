@@ -366,9 +366,9 @@ variable "vpc_lattice_configurations" {
     role_arn         = string
     target_group_arn = string
     port_name        = string
-  })
+  }))
   default = null
-})
+}
 
 variable "wait_for_steady_state" {
   description = "If true, Terraform will wait for the service to reach a steady state before continuing. Default is `false`"
