@@ -340,7 +340,7 @@ resource "aws_ecs_service" "this" {
   }
 
   dynamic "vpc_lattice_configurations" {
-    for_each = var.vpc_lattice_configurations != null ? [var.vpc_lattice_configurations] : []
+    for_each = var.vpc_lattice_configurations
 
     content {
       role_arn         = local.infrastructure_iam_role_arn
