@@ -362,13 +362,13 @@ variable "volume_configuration" {
 
 variable "vpc_lattice_configurations" {
   description = "The VPC Lattice configuration for your service that allows Lattice to connect, secure, and monitor your service across multiple accounts and VPCs"
-  type = object({
+  type = map(object({
     role_arn         = string
     target_group_arn = string
     port_name        = string
   })
   default = null
-}
+})
 
 variable "wait_for_steady_state" {
   description = "If true, Terraform will wait for the service to reach a steady state before continuing. Default is `false`"
